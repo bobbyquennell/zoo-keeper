@@ -30,7 +30,7 @@ this folder contains the code that defines the shared S3 and DynamoDB for remote
 > assume <your-aws-profile>
 ```
 
-inside `remote-state` directory
+inside `organization` directory
 
 ```bash
 > terraform init
@@ -40,4 +40,4 @@ inside `remote-state` directory
 
 ### note
 
-you only need to run this folder once, as it is used to initialize/scaffold the terraform in your AWS account.
+you only need to run this folder once, as it is used to create the AWS organization with your root AWS account.
