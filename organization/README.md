@@ -32,10 +32,20 @@ this folder contains the code that defines the shared S3 and DynamoDB for remote
 
 inside `organization` directory
 
+1. create an `organization.tfvars` file:
+
+```
+prod_account_name = "Prod Account"
+prod_account_email = "prod@example.com" 
+dev_account_name = "Dev Account"
+dev_account_email = "dev@example.com"
+```
+
+2. run cmd
 ```bash
 > terraform init
-> terraform plan
-> terraform apply
+> terraform plan -var-file=organization.tfvars -out=organization.out
+> terraform apply "organization.out"
 ```
 
 ### note
